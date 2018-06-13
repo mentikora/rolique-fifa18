@@ -9,7 +9,7 @@
 
   box-shadow: inset 0px -40px 100px 0 var(--body-bg);
 
-  background: url('main-background.png') no-repeat 50% bottom;
+  background: url('./../../images/main-background.png') no-repeat 50% bottom;
   background-size: cover;
 }
 
