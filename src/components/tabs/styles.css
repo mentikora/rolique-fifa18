@@ -1,0 +1,39 @@
+/* tabs wrapper content */
+.tabs{
+
+}
+.tabs nav{
+  margin-bottom: 25px;
+}
+
+  /* tabs list */
+  .tabs__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+    .tabs__list li{
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .tabs__list a{
+      text-decoration: none;
+      color: var(--color-white);
+    }
+  
+/* tab block */
+.block{
+  width: 100%;
+  padding: 15px;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  
+  color: var(--color-white);
+  
+  border-radius: 5px;
+  background: var(--block-bg);
+  box-shadow: 0 1px 7px 1px rgba( var(--color-black), .17);
+}
