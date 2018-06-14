@@ -12,7 +12,7 @@ const playersData = [
     position: 'FEdev',
     role: 'Cristiano Ronaldo',
     align: 'left',
-    pros: 'dribling, situation on the fiplayerd'
+    pros: 'dribling, situation on the field'
   },
   {
     name: 'Volodymyr',
@@ -134,7 +134,7 @@ const Overview = () => (
               </h2>
               <div>
                 <div className="player__pros">
-                  Cons: {player.pros}
+                  Pros: {player.pros}
                 </div>
               </div>
             </div>
