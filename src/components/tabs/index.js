@@ -100,12 +100,16 @@ const Tabs = () => (
           <li>
             <Link to="/rules">Rules</Link>
           </li>
+          <li>
+            <Link to="/highlights">Highlights</Link>
+          </li>
         </ul>
       </nav>
 
       <Route exact path="/" component={ Overview } />
       <Route path="/bracket" component={ Bracket } />
       <Route path="/rules" component={ Rules } />
+      <Route path="/highlights" component={ Highlights } />
     </div>
   </Router>
 );
@@ -163,11 +167,116 @@ const Overview = () => (
 
 const Bracket = () => (
   <div>
-    <div className="block">
-      Bracket, coming soon...
+    <div className="bracket-wrapper">
+
+      <div className="bracket-row">
+        <h4>Qualification</h4>
+        <div className="bracket-cell">
+          <div className="bracket-team">
+            <h3 className="bracket-team__name">
+              Yatseniuk / Paskiv
+            </h3>
+            <div className="bracket-team__score">
+              <span className="bracket-team__score-g1">1</span>
+              <span className="bracket-team__score-g2">2 | p(4)</span>
+            </div>
+          </div>
+          <div className="bracket-team">
+            <h3 className="bracket-team__name">
+              Semenyuk / Vasylyshyn
+            </h3>
+            <div className="bracket-team__score">
+              <span className="bracket-team__score-g1">1</span>
+              <span className="bracket-team__score-g2">2 | p(5)</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="bracket-cell">
+          <div className="bracket-team">
+            <h3 className="bracket-team__name">
+              team name
+            </h3>
+            <div className="bracket-team__score">
+              <span className="bracket-team__score-g1">1</span>
+              <span className="bracket-team__score-g2">2</span>
+            </div>
+          </div>
+          <div className="bracket-team">
+            <h3 className="bracket-team__name">
+              team name
+            </h3>
+            <div className="bracket-team__score">
+              <span className="bracket-team__score-g1">1</span>
+              <span className="bracket-team__score-g2">2</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="bracket-row">
+        <h4>III-IV place</h4>
+        <div className="bracket-cell">
+          <div className="bracket-team">
+            <h3 className="bracket-team__name">
+              team name
+            </h3>
+            <div className="bracket-team__score">
+              <span className="bracket-team__score-g1">1</span>
+              <span className="bracket-team__score-g2">2</span>
+            </div>
+          </div>
+          <div className="bracket-team">
+            <h3 className="bracket-team__name">
+              team name
+            </h3>
+            <div className="bracket-team__score">
+              <span className="bracket-team__score-g1">1</span>
+              <span className="bracket-team__score-g2">2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bracket-row">
+        <h4>I-II place</h4>
+        <div className="bracket-cell">
+          <div className="bracket-team">
+            <h3 className="bracket-team__name">
+              team name
+            </h3>
+            <div className="bracket-team__score">
+              <span className="bracket-team__score-g1">1</span>
+              <span className="bracket-team__score-g2">2</span>
+            </div>
+          </div>
+          <div className="bracket-team">
+            <h3 className="bracket-team__name">
+              team name
+            </h3>
+            <div className="bracket-team__score">
+              <span className="bracket-team__score-g1">1</span>
+              <span className="bracket-team__score-g2">2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 );
+
+const Highlights = () => (
+  <div className="block">
+    <iframe 
+      src="//coub.com/embed/10uvl3?muted=false&autostart=false&originalSize=false&startWithHD=false" 
+      width="600" 
+      height="400" 
+      allow="autoplay" 
+      />
+  </div>
+)
 
 const Rules = () => (
   <div>
@@ -179,7 +288,7 @@ const Rules = () => (
           </h3>
           <ul>
             <li>
-              Players not present at the designated start time for any match will be disqualified, and their opponent shall be granted a 3-0 score.
+              The Team who plays 'home' is responsible for starting a match. They also making first pick
             </li>
             <li>
               Each Player will have 2-3 minutes to configure controls
@@ -189,6 +298,9 @@ const Rules = () => (
             </li>
             <li>
               If a Player has an issue that they feplayer is creating an unfair advantage for the opponent, they must pause the game, (or request their opponent pause the game) and bring the issue to the attention of the referee. The referee will address the issue. Referee - rolique team.
+            </li>
+            <li>
+              No team mirrors.
             </li>
           </ul>
         </li>
@@ -217,7 +329,19 @@ const Rules = () => (
               Game speed: Normal
             </li>
             <li>
+              Level: Legendary
+            </li>
+            <li>
+              Stats: all teams have 85 rating score
+            </li>
+            <li>
               All matches should be played by a ´Friendly Match´
+            </li>
+            <li>
+              Only tactical defense is allowed
+            </li>
+            <li>
+              It´s forbidden to use custom formations, only the standard formations are allowed to use
             </li>
           </ul>
         </li>
