@@ -8,7 +8,7 @@ const playersData = [
     name: 'Anton',
     surname: 'Yatseniuk',
     nickname: 'Otec',
-    image: '/img/anton.png',
+    image: 'img/anton.png',
     position: 'FEdev',
     role: 'Cristiano Ronaldo',
     align: 'left',
@@ -18,7 +18,7 @@ const playersData = [
     name: 'Volodymyr',
     surname: 'Paskiv',
     nickname: 'YaPridymav',
-    image: '/img/vova.png',
+    image: 'img/vova.png',
     position: 'BEdev',
     role: 'Lionel Messi',
     align: 'right',
@@ -28,7 +28,7 @@ const playersData = [
     name: 'Roman',
     surname: 'Malec',
     nickname: 'RapGod',
-    image: '/img/malec.png',
+    image: 'img/malec.png',
     position: 'BEdev',
     role: 'Neymar da Silva Santos Júnior',
     align: 'left',
@@ -38,7 +38,7 @@ const playersData = [
     name: 'Igor',
     surname: 'Semenyuk',
     nickname: 'Schleunigalover',
-    image: '/img/igor.png',
+    image: 'img/igor.png',
     position: 'BEdev',
     role: 'Paulo Dybala',
     align: 'right',
@@ -48,7 +48,7 @@ const playersData = [
     name: 'Vladyslav',
     surname: 'Bilyi',
     nickname: 'PHP>all',
-    image: '/img/vlad.png',
+    image: 'img/vlad.png',
     position: 'BEdev',
     role: 'Olivier Giroud',
     align: 'left',
@@ -58,7 +58,7 @@ const playersData = [
     name: 'Markiian',
     surname: 'Linynskyi',
     nickname: 'borschtsch',
-    image: '/img/markiyan.png',
+    image: 'img/markiyan.png',
     position: 'FEdev',
     role: 'Leroy Sane',
     align: 'right',
@@ -68,7 +68,7 @@ const playersData = [
     name: 'Nazar',
     surname: 'Vasylyshyn',
     nickname: 'break the walls',
-    image: '/img/nazar.png',
+    image: 'img/nazar.png',
     position: 'design',
     role: 'Harry Kane',
     align: 'left',
@@ -78,7 +78,7 @@ const playersData = [
     name: 'Roman',
     surname: 'Horobets',
     nickname: 'css4food',
-    image: '/img/horo.png',
+    image: 'img/horo.png',
     position: 'FEdev',
     role: 'Andriy Pyatov',
     align: 'right',
@@ -117,7 +117,7 @@ const Overview = () => (
         playersData.map( (player, key) => (
           <div className={`player player-${player.align} player-${key}`} key={key}>
             <div className="player__image">
-              <img src={window.location.origin + player.image}/>
+              <img src={player.image}/>
             </div>
             <div className="player__content">
               <span>
