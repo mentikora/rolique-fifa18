@@ -158,3 +158,13 @@
     padding: 10px;
     color: var(--color-gray);
   }
+
+/* sponsors */
+.sponsors{
+  text-align: center;
+  color: var(--color-white);
+}
+  .sponsors ul{
+    padding: 0;
+    list-style: none;
+  }

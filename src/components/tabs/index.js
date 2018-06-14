@@ -7,7 +7,7 @@ const playersData = [
   {
     name: 'Anton',
     surname: 'Yatseniuk',
-    nickname: 'Otec',
+    nickname: 'Batya',
     image: 'img/anton.png',
     position: 'FEdev',
     role: 'Cristiano Ronaldo',
@@ -67,7 +67,7 @@ const playersData = [
   {
     name: 'Nazar',
     surname: 'Vasylyshyn',
-    nickname: 'break the walls',
+    nickname: 'walldestroyer',
     image: 'img/nazar.png',
     position: 'design',
     role: 'Harry Kane',
@@ -142,13 +142,29 @@ const Overview = () => (
         ))
       }
     </div>
+    <div className="sponsors">
+      <h2>
+        General sponsors
+      </h2>
+      <ul>
+        <li>
+          2 pizdylinu from Vasya
+        </li>
+        <li>
+          Coach Tolique
+        </li>
+        <li>
+          Vegetarian cafe "Dich West"
+        </li>
+      </ul>
+    </div>
   </div>
 );
 
 const Bracket = () => (
   <div>
     <div className="block">
-      Bracket
+      Bracket, coming soon...
     </div>
   </div>
 );
@@ -159,7 +175,7 @@ const Rules = () => (
       <ul>
         <li>
           <h3>
-            MATCH RULES & TOURNAMENT FORMAT 
+            Match rules & Tournament format
           </h3>
           <ul>
             <li>
@@ -178,7 +194,7 @@ const Rules = () => (
         </li>
         <li>
           <h3>
-            GAME INTERRUPTIONS AND PAUSES
+            Game interruptions and pauses
           </h3>
           <ul>
             <li>
@@ -195,13 +211,10 @@ const Rules = () => (
           </h3>
           <ul>
             <li>
-              <h4>
-                General
-              </h4>
-              <ul>
-                <li>Match durance: 12 minutes (6 minutes per half)</li>
-                <li>Game speed: Normal</li>
-              </ul>
+              Match duration: 12 minutes (6 minutes per half)
+            </li>
+            <li>
+              Game speed: Normal
             </li>
             <li>
               All matches should be played by a ´Friendly Match´
