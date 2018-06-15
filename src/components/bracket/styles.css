@@ -1,0 +1,57 @@
+/* bracket */
+.bracket-wrapper{
+  width: 100%;
+  display: flex;
+}
+.bracket-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  .bracket-row + .bracket-row{
+    margin-left: 25px;
+  }
+  .bracket-row > h4{
+    margin-top: 0;
+
+    text-align: center;
+    color: var(--color-white);
+  }
+.bracket-cell{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  .bracket-cell + .bracket-cell {
+    margin-top: 25px;
+  }
+
+.bracket-team{
+  display: flex;
+
+  padding: 10px;
+
+  border-radius: 5px;
+  background: var(--block-bg);
+  box-shadow: 0 1px 7px 1px rgba( 0,0,0, .17);
+}
+  .bracket-team__name{
+    margin: 0;
+
+    flex-grow: 1;
+
+    color: var(--color-white);
+  }
+  .bracket-team__score{
+    margin-left: 15px;
+  }
+    .bracket-team__score span{
+      display: inline-block;
+      padding-left: 5px;
+      padding-right: 5px;
+
+      background-color: var(--color-highlight);
+    }
+      .bracket-team__score span + span {
+        margin-left: 5px;
+      }

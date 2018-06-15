@@ -1,10 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './styles.css';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Bracket } from '../bracket';
+import ReactTwitchEmbedVideo from "react-twitch-embed-video";
 
 const playersData = [
   {
+    id: 1,
     name: 'Anton',
     surname: 'Yatseniuk',
     nickname: 'Batya',
@@ -15,6 +18,7 @@ const playersData = [
     pros: 'dribling, situation on the field'
   },
   {
+    id: 2,
     name: 'Volodymyr',
     surname: 'Paskiv',
     nickname: 'YaPridymav',
@@ -25,6 +29,7 @@ const playersData = [
     pros: 'dribling (no), pass'
   },
   {
+    id: 3,
     name: 'Roman',
     surname: 'Malec',
     nickname: 'RapGod',
@@ -35,6 +40,7 @@ const playersData = [
     pros: 'game knowledge, free kick'
   },
   {
+    id: 4,
     name: 'Igor',
     surname: 'Semenyuk',
     nickname: 'Schleunigalover',
@@ -45,6 +51,7 @@ const playersData = [
     pros: 'Italy teams, corners'
   },
   {
+    id: 5,
     name: 'Vladyslav',
     surname: 'Bilyi',
     nickname: 'PHP>all',
@@ -55,6 +62,7 @@ const playersData = [
     pros: 'runs, pass'
   },
   {
+    id: 6,
     name: 'Markiian',
     surname: 'Linynskyi',
     nickname: 'borschtsch',
@@ -65,6 +73,7 @@ const playersData = [
     pros: 'long pass, flank'
   },
   {
+    id: 7,
     name: 'Nazar',
     surname: 'Vasylyshyn',
     nickname: 'walldestroyer',
@@ -75,6 +84,7 @@ const playersData = [
     pros: 'positioning, dribling'
   },
   {
+    id: 8,
     name: 'Roman',
     surname: 'Horobets',
     nickname: 'css4food',
@@ -83,6 +93,17 @@ const playersData = [
     role: 'Andriy Pyatov',
     align: 'right',
     pros: 'defence, flank'
+  },
+  {
+    id: 9,
+    name: 'Pavlo',
+    surname: 'Servatovych',
+    nickname: 'blackhorse',
+    image: '',
+    position: 'FEdev',
+    role: '-',
+    align: 'left',
+    pros: '-'
   }
 ];
 
@@ -103,13 +124,17 @@ const Tabs = () => (
           <li>
             <Link to="/highlights">Highlights</Link>
           </li>
+          <li>
+            <Link to="/live">Live</Link>
+          </li>
         </ul>
       </nav>
 
       <Route exact path="/" component={ Overview } />
-      <Route path="/bracket" component={ Bracket } />
+      <Route path="/bracket" component={ () => <Bracket playersData={playersData} /> } />
       <Route path="/rules" component={ Rules } />
       <Route path="/highlights" component={ Highlights } />
+      <Route path="/live" component={ Live } />
     </div>
   </Router>
 );
@@ -161,108 +186,6 @@ const Overview = () => (
           Vegetarian cafe "Dich West"
         </li>
       </ul>
-    </div>
-  </div>
-);
-
-const Bracket = () => (
-  <div>
-    <div className="bracket-wrapper">
-
-      <div className="bracket-row">
-        <h4>Qualification</h4>
-        <div className="bracket-cell">
-          <div className="bracket-team">
-            <h3 className="bracket-team__name">
-              Yatseniuk / Paskiv
-            </h3>
-            <div className="bracket-team__score">
-              <span className="bracket-team__score-g1">1</span>
-              <span className="bracket-team__score-g2">2 | p(4)</span>
-            </div>
-          </div>
-          <div className="bracket-team">
-            <h3 className="bracket-team__name">
-              Semenyuk / Vasylyshyn
-            </h3>
-            <div className="bracket-team__score">
-              <span className="bracket-team__score-g1">1</span>
-              <span className="bracket-team__score-g2">2 | p(5)</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="bracket-cell">
-          <div className="bracket-team">
-            <h3 className="bracket-team__name">
-              team name
-            </h3>
-            <div className="bracket-team__score">
-              <span className="bracket-team__score-g1">1</span>
-              <span className="bracket-team__score-g2">2</span>
-            </div>
-          </div>
-          <div className="bracket-team">
-            <h3 className="bracket-team__name">
-              team name
-            </h3>
-            <div className="bracket-team__score">
-              <span className="bracket-team__score-g1">1</span>
-              <span className="bracket-team__score-g2">2</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div className="bracket-row">
-        <h4>III-IV place</h4>
-        <div className="bracket-cell">
-          <div className="bracket-team">
-            <h3 className="bracket-team__name">
-              team name
-            </h3>
-            <div className="bracket-team__score">
-              <span className="bracket-team__score-g1">1</span>
-              <span className="bracket-team__score-g2">2</span>
-            </div>
-          </div>
-          <div className="bracket-team">
-            <h3 className="bracket-team__name">
-              team name
-            </h3>
-            <div className="bracket-team__score">
-              <span className="bracket-team__score-g1">1</span>
-              <span className="bracket-team__score-g2">2</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bracket-row">
-        <h4>I-II place</h4>
-        <div className="bracket-cell">
-          <div className="bracket-team">
-            <h3 className="bracket-team__name">
-              team name
-            </h3>
-            <div className="bracket-team__score">
-              <span className="bracket-team__score-g1">1</span>
-              <span className="bracket-team__score-g2">2</span>
-            </div>
-          </div>
-          <div className="bracket-team">
-            <h3 className="bracket-team__name">
-              team name
-            </h3>
-            <div className="bracket-team__score">
-              <span className="bracket-team__score-g1">1</span>
-              <span className="bracket-team__score-g2">2</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 );
@@ -346,6 +269,14 @@ const Rules = () => (
           </ul>
         </li>
       </ul>
+    </div>
+  </div>
+);
+
+const Live = () => (
+  <div className="twitch-stream-wrapper">
+    <div className="twitch-stream-block">
+      <ReactTwitchEmbedVideo channel="spamforhope" layout="video" />
     </div>
   </div>
 );
