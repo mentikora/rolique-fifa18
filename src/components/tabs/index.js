@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './styles.css';
 
+import Player from '../player';
 import { Bracket } from '../bracket';
 import ReactTwitchEmbedVideo from "react-twitch-embed-video";
 
@@ -142,34 +143,7 @@ const Tabs = () => (
 const Overview = () => (
   <div>
     <div className="players_wrapper">
-      {
-        playersData.map( (player, key) => (
-          <div className={`player player-${player.align} player-${key}`} key={key}>
-            <div className="player__image">
-              <img src={player.image}/>
-            </div>
-            <div className="player__content">
-              <span>
-                {player.role}
-                <span className="divider">/</span>
-                {player.position}
-              </span>
-              <h2 className="player__name">
-                {player.name}
-                <span className="player__nickname">
-                  `{player.nickname}`
-                </span>
-                {player.surname}
-              </h2>
-              <div>
-                <div className="player__pros">
-                  Pros: {player.pros}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))
-      }
+      <Player />
     </div>
     <div className="sponsors">
       <h2>
