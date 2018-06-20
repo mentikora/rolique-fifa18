@@ -6,13 +6,13 @@ import './styles.css';
 
 const TabContent = () => (
   <div className="tab-content">
-    <Route exact path="/" component={ Overview } />
+    <Route exact path="/" component={ Players } />
     {/* <Route path="/bracket" component={ () => <Bracket playersData={playersData} /> } /> */}
     <Route path="/rules" component={ Rules } />
   </div>
 )
 
-const Overview = () => (
+const Players = () => (
   <div>
     <div className="players_wrapper">
       <Player />
