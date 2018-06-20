@@ -1,0 +1,23 @@
+/* news wrapper */
+.news{
+  padding: 20px; 
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-area: news;
+
+  background-color: var(--color-black);
+}
+
+/* news item */
+.news__item{
+  color: var(--color-white);
+}
+  .news__item--semi{
+    grid-column: span 2;
+  }
+  .news__item--full{
+    grid-column: span 3;
+  }

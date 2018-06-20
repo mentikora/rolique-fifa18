@@ -1,0 +1,10 @@
+.twitch-stream-wrapper{
+  grid-area: twitch;
+
+  height: 350px;
+  background-color: var(--color-black);
+}
+  .twitch-stream-wrapper iframe{
+    width: 100%;
+    height: 350px;
+  }

@@ -1,10 +1,11 @@
 /* tabs wrapper content */
 .tabs{
+  grid-area: tabs;
 
-}
-.tabs nav{
-  margin-bottom: 25px;
-  text-align: center;
+  background-image: url('./../../images/tabs-bg.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
   /* tabs list */
@@ -12,50 +13,35 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    background-color: rgba(255,255,255, .3);
   }
     .tabs__list li{
       display: inline-block;
-      margin-right: 10px;
     }
     .tabs__list a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      width: 100%;
+      height: 100%;
+      
       text-decoration: none;
-      color: var(--color-white);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--color-black);
+
+      transition: background-color .25s ease-in-out, color .15s ease-in-out;
     }
-  
-/* tab block */
-.block{
-  width: 100%;
-  padding: 15px;
-  overflow: hidden;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  
-  color: var(--color-white);
-  
-  border-radius: 5px;
-  background: var(--block-bg);
-  box-shadow: 0 1px 7px 1px rgba( 0,0,0, .17);
-}
-  .block iframe{
-    margin-left: auto;
-    margin-right: auto;
-    border: 0;
-    background-color: var(--color-black);
-  }
-
-/* sponsors */
-.sponsors{
-  text-align: center;
-  color: var(--color-white);
-}
-  .sponsors ul{
-    padding: 0;
-    list-style: none;
-  }
-
-/* twitch stream */
-.twitch-stream-wrapper{
-  text-align: center;
-}
+      .tabs__list a:hover{
+        color: var(--color-highlight);
+        background-color: rgba(255,255,255, .5);
+      }
+      
