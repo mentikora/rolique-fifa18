@@ -31,7 +31,7 @@ class News extends Component {
           ? 
           'Loading...' 
           :
-          this.state.response.items.map( (item, key) => (
+          this.state.response.items.sort( (a, b ) => a.fields.id - b.fields.id ).reverse().map( (item, key) => (
             <div 
               key={ key }
               className={`news-item ${item.fields.status === 2 ? 'news-item--semi' : ''} ${item.fields.status === 3 ? 'news-item--full' : ''}`}
@@ -47,9 +47,6 @@ class News extends Component {
               </p>
             </div>
           ))
-        }
-        {
-          console.log(this.state.response)
         }
       </div>
     )

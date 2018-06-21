@@ -61,7 +61,10 @@ class Player extends Component {
                 {
                   player.fields.image 
                   ? 
-                  <img src={ player.fields.image.fields.file.url } />
+                  <img 
+                    src={ player.fields.image.fields.file.url } 
+                    alt={ player.fields.nickname }
+                  />
                   :
                   null
                 }
