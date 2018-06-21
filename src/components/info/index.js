@@ -4,7 +4,7 @@ import './styles.css';
 export default () => (
   <div className="info">
     <span className="info__pretitle">
-      tournament
+      Current tournament
     </span>
     <h1 className="info__title">
       Rolique Fifa`18

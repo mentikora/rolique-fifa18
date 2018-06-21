@@ -6,7 +6,10 @@ const Tabs = () => (
   <div className="tabs">
     <ul className="tabs__list">
       <li>
-        <Link to="/">Players</Link>
+        <Link to="/">Homepage</Link>
+      </li>
+      <li>
+        <Link to="/players">Players</Link>
       </li>
       {/* <li>
         <Link to="/bracket">Bracket</Link>
@@ -14,9 +17,9 @@ const Tabs = () => (
       <li>
         <Link to="/rules">Rules</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/live">Live</Link>
-      </li>
+      </li> */}
     </ul>
   </div>
 );

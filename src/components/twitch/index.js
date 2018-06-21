@@ -5,7 +5,8 @@ import './styles.css';
 export default () => (
   <div className="twitch-stream-wrapper">
     <div className="twitch-stream-block">
-      <ReactTwitchEmbedVideo channel="spamforhope" layout="video" />
+      <ReactTwitchEmbedVideo channel="Castro_1021" layout="video" />
+      {/* spamforhope */}
     </div>
   </div>
 );

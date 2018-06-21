@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Radar } from 'react-chartjs-2';
 import './styles.css';
 
 const contentful = require("contentful");
@@ -6,6 +7,22 @@ const client = contentful.createClient({
   space: "l5wqt7w3yse5",
   accessToken: "805be81373240aeb73d560b7cb619df34c501edcca1d48501c1844c46dbedbc0"
 });
+
+const data = {
+  labels: ['PAC', 'SHO', 'BASIC', 'DRI', 'DEF', 'PHY'],
+  datasets: [
+    {
+      label: 'Attributes',
+      backgroundColor: 'rgba(179,181,198,0.2)',
+      borderColor: '#d9381f',
+      pointBackgroundColor: 'rgba(179,181,198,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(179,181,198,1)',
+      data: [65, 59, 90, 81, 56, 55]
+    }
+  ]
+};
 
 class Player extends Component {
 
@@ -26,7 +43,7 @@ class Player extends Component {
 
   render() {
     return (
-      <div>
+      <div className="players_wrapper">
         {
           this.state.response === null 
           ? 
@@ -35,7 +52,7 @@ class Player extends Component {
           this.state.response.map( (player, key) => (
             <div 
               key={ key } 
-              className={`player player-${player.fields.id} player-${player.fields.id % 2 === 0 ? 'right' : 'left'}`}
+              className="player"
             >
               <div 
                 className="player__image"
@@ -56,12 +73,11 @@ class Player extends Component {
                   { player.fields.position }
                 </span>
                 <h2 className="player__name">
-                  { player.fields.name }
-                  <span className="player__nickname">
-                    `{ player.fields.nickname }`
-                  </span>
-                  {player.fields.surname}
+                  { player.fields.name } {player.fields.surname}
                 </h2>
+                <span className="player__nickname">
+                  `{ player.fields.nickname }`
+                </span>
                 <div>
                   {
                     player.fields.pros 
@@ -73,6 +89,9 @@ class Player extends Component {
                     null 
                   }
                 </div>
+              </div>
+              <div className="player__content-data">
+                <Radar data={data} />
               </div>
             </div>
 
