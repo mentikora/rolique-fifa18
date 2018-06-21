@@ -34,7 +34,7 @@ class Player extends Component {
   }
 
   componentDidMount = () => {
-    client.getEntries()
+    client.getEntries({content_type: 'users'})
       .then((response) => this.setState(
         { response: response.items.sort( (a, b ) => a.fields.id - b.fields.id  ) }
       ))
