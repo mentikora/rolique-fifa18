@@ -4,15 +4,15 @@ import './styles.css';
 const news = [
   {
     title: 'Results of the first championship',
-    text: 'Антон вздрюкав Влада 7:0, але це не допомогло йому взяти срібло чемпіонату, тому в результаті - бронза. В фіналі зустрілись п\'яний коментатор Володимир Папаськів і батько Емінема - Роман Малець, який і поїхав додому переможцем.',
+    text: 'Anton vzdryukav Vlada 7:0, ale tse ne dopomohlo yomu vzyaty sriblo chempionatu, tomu v rezulʹtati - bronza. V finali zustrilysʹ p\'yanyy komentator Volodymyr Papasʹkiv i batʹko Eminema - Roman Maletsʹ, yakyy i poyikhav dodomu peremozhtsem.',
     status: '3',
     date: '15.06.2018'
   },
   {
-    title: 'FIFA eWorld Cup returns to London',
-    text: 'EA and FIFA have announced that the FIFA eWorld Cup Grand Final 2018 will take place in London.',
+    title: 'Group B, day 2. Poland strong!',
+    text: 'Argentina-Poland (2:1), Poland-Spain (1:1) ',
     status: '1',
-    date: '24/05/18'
+    date: '21/06/18'
   },
   {
     title: 'Roma crowned Elite Series FIFA champions',
@@ -21,8 +21,8 @@ const news = [
     date: '27/04/18'
   },
   {
-    title: 'eSports: Man City make major signing',
-    text: 'Yinsu Collins casts an eye over the past week, as Kingzone continue to dominate and Man City make a major signing.',
+    title: 'Group A, day 2',
+    text: 'The French have caught the frogs all match: France-Columbia(0:3), Belgium-France(2:2)',
     status: '1',
     date: '11/03/18'
   },
@@ -50,7 +50,7 @@ export default () => (
           <p className="news-item__date">
             { item.date }
           </p>
-          <h2 className="news-item__tile">
+          <h2 className="news-item__title">
             { item.title }
           </h2>
           <p className="news-item__text">
