@@ -5,6 +5,7 @@ import WebFont from 'webfontloader';
 import Info from './components/info';
 import Tabs from './components/tabs';
 import TabContent from './components/tab-content';
+import Sponsors from './components/sponsors';
 
 import './styles.css';
 
@@ -24,6 +25,7 @@ class App extends Component {
             <Info />
             <Tabs /> 
             <TabContent />
+            <Sponsors />
           </div>
         </Router>
 

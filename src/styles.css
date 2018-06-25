@@ -7,13 +7,6 @@
 /* page layout */
 .page-layout{
   display: grid;
-  grid-template-areas: "info tabs" 
-                       "twitch twitch"
-                       "news news"
-                       "tabcontent tabcontent";
-  grid-template-rows: 350px auto;
-  grid-template-columns: 50% 50%;
-  grid-column-gap: 2px;
 
   margin-left: auto;
   margin-right: auto;
@@ -28,6 +21,28 @@
   background-repeat: no-repeat;
   background-size: 100% 350px;
 }
+  @media(max-width: 767px){
+    .page-layout{
+      grid-template-areas:  "info info"
+                            "tabs tabs" 
+                            "twitch twitch"
+                            "news news"
+                            "tabcontent tabcontent"
+                            "sponsors sponsors";
+    }
+  }
+  @media(min-width: 768px){
+    .page-layout{
+      grid-template-areas:  "info tabs" 
+                            "twitch twitch"
+                            "news news"
+                            "tabcontent tabcontent"
+                            "sponsors sponsors";
+      grid-template-rows: 350px auto;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 2px;
+    }
+  }
   @media(max-width: 1219px){
     .page-layout{
       width: 90%;

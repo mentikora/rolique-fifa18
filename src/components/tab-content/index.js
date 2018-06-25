@@ -25,25 +25,7 @@ const Homepage = () => (
 
 const Players = () => (
   <div>
-    <div>
-      <Player />
-    </div>
-    <div className="sponsors">
-      <h2>
-        General sponsors
-      </h2>
-      <ul>
-        <li>
-          2 pizdylinu from Vasya
-        </li>
-        <li>
-          Coach Tolique
-        </li>
-        <li>
-          Vegetarian cafe "Dich West"
-        </li>
-      </ul>
-    </div>
+    <Player />
   </div>
 );
 

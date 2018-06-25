@@ -1,5 +1,7 @@
 .tab-content{
   grid-area: tabcontent;
+
+  background: #606c88;
 }
 
 /* sponsors */
