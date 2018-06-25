@@ -1,16 +1,13 @@
 .tab-content{
   grid-area: tabcontent;
 
-  background: #606c88;
+  background-color: var(--color-black);
 }
 
-/* sponsors */
-.sponsors{
-  text-align: center;
-  color: var(--color-white);
+/* rules wrapper */
+.rules-wrapper{
 }
-  .sponsors ul{
-    padding: 0;
+  .rules-wrapper ul{
     list-style: none;
   }
 

@@ -5,8 +5,9 @@
   padding: 25px;
 
   display: flex;
-
   flex-direction: column;
+
+  background-color: rgba(255,255,255, .3);
 }
   @media(max-width: 767px){
     .info{
@@ -24,7 +25,7 @@
   /* pretitle */
   .info__pretitle{
     text-transform: uppercase;
-    color: var(--color-gray);
+    color: var(--color-lightgray);
   }
   /* title */
   .info__title{

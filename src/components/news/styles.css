@@ -5,12 +5,6 @@
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-area: news;
-
-  background: rgb(27,33,54);
-  background: -moz-linear-gradient(45deg,  rgba(27,33,54,1) 0%, rgba(79,94,144,1) 100%);
-  background: -webkit-linear-gradient(45deg,  rgba(27,33,54,1) 0%,rgba(79,94,144,1) 100%);
-  background: linear-gradient(45deg,  rgba(27,33,54,1) 0%,rgba(79,94,144,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2136', endColorstr='#4f5e90',GradientType=1 );
 }
 
 /* news item */
@@ -20,7 +14,6 @@
   
   /* border-radius: 10px; */
   color: var(--color-white);
-  background-color: rgba(255,255,255, .1);
 }
   .news-item--semi{
     grid-column: span 2;
