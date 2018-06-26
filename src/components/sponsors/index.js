@@ -4,15 +4,15 @@ import './styles.css';
 const sponsors = [
   {
     name: '2 pizdylinu from Vasya',
-    image: './images/s1.jpg'
+    image: '../images/s1.jpg'
   },
   {
     name: 'Coach Tolique',
-    image: './images/s2.png'
+    image: '../images/s2.png'
   },
   {
     name: 'Vegetarian cafe "Dich West"',
-    image: './images/s3.jpg'
+    image: '../images/s3.jpg'
   },
 ];
 
