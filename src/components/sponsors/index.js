@@ -1,37 +1,61 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
 
-const sponsors = [
-  {
-    name: '2 pizdylinu from Vasya',
-    image: '../images/s1.jpg'
-  },
-  {
-    name: 'Coach Tolique',
-    image: '../images/s2.png'
-  },
-  {
-    name: 'Vegetarian cafe "Dich West"',
-    image: '../images/s3.jpg'
-  },
-];
+import Loader from '../loader';
 
-export default () => (
-  <div className="sponsors">
+const contentful = require("contentful");
+const client = contentful.createClient({
+  space: "l5wqt7w3yse5",
+  accessToken: "805be81373240aeb73d560b7cb619df34c501edcca1d48501c1844c46dbedbc0"
+});
 
-    {
-      sponsors.map( (sponsor, key) => (
-        <div 
-          className="sponsor" 
-          key={ key }
-          style={{ backgroundImage: `url(${ sponsor.image })` }}
-        >
-          <h3 className="sponsor__name">
-            { sponsor.name }
-          </h3>
-        </div>
+class Sponsors extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      response: null
+    };
+  }
+
+  componentDidMount = () => {
+    client.getEntries({content_type: 'partners'})
+      .then((response) => this.setState(
+        { 
+          response: response.items        
+        }
       ))
-    }
+      .catch(console.error)
+  }
 
-  </div>
-)
+  render() {
+    return (
+
+      <div className="sponsors">
+
+        {
+          this.state.response === null 
+          ? 
+          <Loader /> 
+          :
+          this.state.response.map( (sponsor, key) => (
+            <div 
+              className="sponsor" 
+              key={ key }
+              style={{ backgroundImage: `url(${ sponsor.fields.image.fields.file.url })` }}
+            >
+              <h3 className="sponsor__name">
+                { sponsor.fields.name }
+              </h3>
+            </div>
+          ))
+          
+        }
+    
+      </div>
+
+    )
+  }
+}
+
+export default Sponsors;
