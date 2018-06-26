@@ -4,13 +4,6 @@
   background-color: var(--color-black);
 }
 
-/* rules wrapper */
-.rules-wrapper{
-}
-  .rules-wrapper ul{
-    list-style: none;
-  }
-
 /* twitch stream */
 .twitch-stream-wrapper{
   text-align: center;
