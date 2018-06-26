@@ -34,7 +34,7 @@ class News extends Component {
           this.state.response.items.sort( (a, b ) => a.fields.id - b.fields.id ).reverse().map( (item, key) => (
             <div 
               key={ key }
-              className={`news-item ${item.fields.status === 2 ? 'news-item--semi' : ''} ${item.fields.status === 3 ? 'news-item--full' : ''}`}
+              className={`news-item ${item.fields.status === 1 ? 'news-item--semi' : ''} ${item.fields.status === 2 ? 'news-item--full' : ''}`}
             >
               <p className="news-item__date">
                 { item.fields.date }

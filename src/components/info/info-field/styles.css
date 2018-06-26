@@ -1,17 +1,20 @@
 /* input field => championship text */
 .info__input{
-  background-color: inherit;
   border: 0;
   outline: 0;
   box-shadow: none;
   cursor: default;
 
+  padding: 6px 12px;
+  max-width: 100%;
+
+  background-color: var(--color-black);
   transition: background-color .15s ease-in-out;
 }
   /* input field in form's edit mode */
   .info__form--edit .info__input{
-    background-color: rgba(255,255,255, .3);
+    background-color: var(--color-darkgray);
   }
     .info__form--edit .info__input:hover{
-      background-color: rgba(255,255,255, .5);
+      background-color: var(--color-darkgray);
     }

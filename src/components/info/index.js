@@ -10,8 +10,8 @@ class Info extends Component {
     this.state = {
       formEditable: false,
       pretitle: 'Current tournament',
-      title: 'Rolique Fifa`18',
-      subtitle: 'Fri Jun 15, 2018 at 6:30pm',
+      title: 'Rolique Fifa World Cup',
+      subtitle: 'Thu Jun 19, 2018',
     };
   }
 
