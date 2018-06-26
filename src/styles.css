@@ -1,3 +1,9 @@
+body{
+  background: url('./images/body-bg.png') no-repeat 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 /* app layout */
 .App{
   padding-top: 100px;
@@ -15,11 +21,6 @@
   overflow: hidden;
 
   box-shadow: var(--shadow3);
-
-  background-image: url('./images/tabs-bg.png');
-  background-position: 50% top;
-  background-repeat: no-repeat;
-  background-size: 100% 350px;
 }
   @media(max-width: 767px){
     .page-layout{
