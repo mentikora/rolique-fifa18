@@ -4,6 +4,13 @@
   background-color: var(--color-black);
 }
 
+.homepage-content{
+  display: grid;
+  grid-template-areas: "news latestmatches";
+  grid-template-columns: 70% 30%;
+  grid-column-gap: 2px;
+}
+
 /* twitch stream */
 .twitch-stream-wrapper{
   text-align: center;

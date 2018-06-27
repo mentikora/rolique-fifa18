@@ -26,8 +26,6 @@ body{
     .page-layout{
       grid-template-areas:  "info info"
                             "tabs tabs" 
-                            "twitch twitch"
-                            "news news"
                             "tabcontent tabcontent"
                             "sponsors sponsors";
     }
@@ -35,8 +33,6 @@ body{
   @media(min-width: 768px){
     .page-layout{
       grid-template-areas:  "info tabs" 
-                            "twitch twitch"
-                            "news news"
                             "tabcontent tabcontent"
                             "sponsors sponsors";
       grid-template-rows: 350px auto;
@@ -54,3 +50,15 @@ body{
       width: 1200px; 
     }
   }
+
+/* table global styles */
+table{
+  border-collapse: collapse;
+
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+
+  border: 0;
+  border-color: transparent;
+}

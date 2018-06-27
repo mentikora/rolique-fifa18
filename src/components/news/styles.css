@@ -2,9 +2,11 @@
 .news{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
   grid-area: news;
+
+  background-color: var(--color-darkgray);
 }
 
 /* news item */
@@ -13,7 +15,7 @@
   padding-right: 20px;
   
   color: var(--color-white);
-  background-color: var(--color-darkgray);
+  background-color: var(--color-black);
 }
   .news-item--semi{
     grid-column: span 1;

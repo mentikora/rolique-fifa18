@@ -1,0 +1,75 @@
+.latest-matches-wrapper{
+  grid-area: latestmatches;
+}
+
+/* match */
+.match{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  padding: 5px;
+  position: relative;
+}
+  .match::after{
+    content: '';
+    display: block;
+    width: 90%;
+    height: 2px;
+
+    position: absolute;
+    left: 5%; bottom: 0;
+
+    background-color: var(--color-darkgray);
+  }
+
+  .match--oftheday{
+    background: #bdc3c7; 
+    background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50);
+    background: linear-gradient(to right, #bdc3c7, #2c3e50); 
+  }
+    .match.match--oftheday::after{
+      display: none;
+    }
+
+  /* match date */
+  .match__date{
+    margin: 0;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* team / player */
+  .match-team{
+    padding: 5px;
+  } 
+    /* first / second team */
+    .match-team--first{
+      text-align: right;
+    }
+      .match-team--first .match-team__score{
+        margin-left: 10px;
+      }
+    .match-team--second{
+      text-align: left;
+    }
+      .match-team--second .match-team__score{
+        margin-right: 10px;
+      }
+
+    /* team / player name */
+    .match-team__name{
+
+    }
+    /* team / player score */
+    .match-team__score{
+      display: inline-block;
+      width: 25px;
+      
+      text-align: center;
+      color: var(--color-white);
+      background-color: var(--color-highlight);
+    }
