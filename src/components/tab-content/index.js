@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import Rules from '../rules';
 import News from '../news';
 import Player from '../player';
+import LatestMatches from '../latest-matches';
 import './styles.css';
 
 const TabContent = () => (
@@ -17,9 +18,10 @@ const TabContent = () => (
 )
 
 const Homepage = () => (
-  <div>
+  <div className="homepage-content">
     {/* <Twitch /> */}
     <News />
+    <LatestMatches />
   </div>
 )
 

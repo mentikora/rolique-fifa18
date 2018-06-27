@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './styles.css';
 
+import Loader from '../loader';
+
 const contentful = require("contentful");
 const client = contentful.createClient({
   space: "l5wqt7w3yse5",
@@ -29,7 +31,7 @@ class News extends Component {
         {
           this.state.response === null 
           ? 
-          'Loading...' 
+          <Loader />
           :
           this.state.response.items.sort( (a, b ) => a.fields.id - b.fields.id ).reverse().map( (item, key) => (
             <div 
