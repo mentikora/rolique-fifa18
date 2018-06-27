@@ -51,7 +51,7 @@ class LatestMatches extends Component {
                     </p>
                     <div className="match-team match-team--first">
                       <span className="match-team__name">
-                        { match.fields.team1name.fields.name }
+                        { match.fields.team1name.fields.currentTeam }
                       </span>
                       <span className="match-team__score">
                         { match.fields.team1score }
@@ -62,7 +62,7 @@ class LatestMatches extends Component {
                         { match.fields.team2score }
                       </span>
                       <span className="match-team__name">
-                        { match.fields.team2name.fields.name }
+                        { match.fields.team2name.fields.currentTeam }
                       </span>
                     </div>
                   </div>
