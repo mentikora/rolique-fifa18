@@ -20,8 +20,8 @@ class InfoInput extends Component {
         value={text}
         onChange={this.onChange}
         disabled={disabled}
-        minlength="1"
-        maxlength="25"
+        minLength="1"
+        maxLength="25"
 
       />
 
