@@ -12,7 +12,7 @@ class App extends Component {
         <Router>
           <div className='page-layout'>
             <Info />
-            <Tabs /> 
+            <Tabs />
             <TabContent />
             <Sponsors />
           </div>
