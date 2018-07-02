@@ -14,12 +14,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "standard",
     "eject": "react-scripts eject",
     "deploy": "npm run build && surge build fifa-rolique.surge.sh"
   },
   "devDependencies": {
     "contentful": "^6.1.1",
-    "react-twitch-embed-video": "^1.0.1"
+    "react-slick": "^0.23.1",
+    "react-twitch-embed-video": "^1.0.1",
+    "slick-carousel": "^1.8.1",
+    "standard": "^11.0.1"
   }
 }

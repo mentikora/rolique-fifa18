@@ -1,11 +1,10 @@
-import React from 'react';
-import './styles.css';
-
+import React from 'react'
+import './styles.css'
 export default () => (
-  <div className="rules-wrapper">
+  <div className='rules-wrapper'>
     <p>
       These are general rules for all types of tournament.
-      <br/>
+      <br />
       Some rules can be provided for specific championship.
     </p>
     <ul>
