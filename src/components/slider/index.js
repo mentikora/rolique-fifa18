@@ -1,10 +1,8 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-
-import './styles.css';
-
+import React, { Component } from 'react'
+import Slider from 'react-slick'
+import './styles.css'
 class MemoriesSlider extends Component {
-  render() {
+  render () {
     const settings = {
       dots: true,
       infinite: false,
@@ -12,7 +10,7 @@ class MemoriesSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       swipeToSlide: true
-    };
+    }
     return (
       <Slider {...settings}>
         <div>
@@ -37,5 +35,4 @@ class MemoriesSlider extends Component {
     )
   }
 }
-
-export default MemoriesSlider;
+export default MemoriesSlider
