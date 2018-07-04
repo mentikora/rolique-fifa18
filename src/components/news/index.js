@@ -14,7 +14,7 @@ class News extends Component {
     }
   }
   componentDidMount () {
-    client.getEntries({content_type: 'news'})
+    client.getEntries({content_type: 'news', order: 'sys.createdAt'})
       .then((response) => this.setState(
         { response: response }
       ))
@@ -24,10 +24,10 @@ class News extends Component {
     return (
       <div className='news'>
         {
-          this.state.response === null ? <Loader /> : this.state.response.items.sort((a, b) => a.fields.id - b.fields.id).reverse().map((item, key) => (
+          !this.state.response ? <Loader /> : this.state.response.items.reverse().map((item, key) => (
             <div
               key={key}
-              className={`news-item ${item.fields.status === 1 ? 'news-item--semi' : ''} ${item.fields.status === 2 ? 'news-item--full' : ''}`}
+              className='news-item'
             >
               <p className='news-item__date'>
                 {item.fields.date}
