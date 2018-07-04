@@ -16,6 +16,16 @@
 
     background-color: rgba(255,255,255, .3);
   }
+    @media (max-width: 767px){
+      .tabs__list{
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (min-width: 768px){
+      .tabs__list{
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
     .tabs__list li{
       display: inline-block;
     }

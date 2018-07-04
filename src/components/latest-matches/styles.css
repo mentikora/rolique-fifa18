@@ -1,5 +1,21 @@
+/* latest matches wrapper */
 .latest-matches-wrapper{
-  grid-area: latestmatches;
+}
+  @media (max-width: 991px){
+    .latest-matches-wrapper{
+      width: 100%;
+      order: 1;
+    }
+  }
+  @media (min-width: 992px){
+    .latest-matches-wrapper{
+      flex: 0 0 30%;
+    }
+  }
+
+/* matches wrapper */
+.latest-matches-content{
+  width: 100%;
 }
 
 /* match */
@@ -42,7 +58,7 @@
   } 
     /* first / second team */
     .match-team--first{
-      text-align: right;
+      justify-content: flex-end;
     }
       .match-team--first .match-team__score{
         margin-left: 10px;
