@@ -19,6 +19,7 @@ class LatestMatches extends Component {
       .then((response) => this.setState(
         { response: response.items }
       ))
+      .then( (response) => console.log(this.state.response))
       .catch(console.error)
   }
   render () {
@@ -36,6 +37,13 @@ class LatestMatches extends Component {
                     {match.fields.date}
                   </p>
                   <div className='match-team match-team--first'>
+                    {
+                      !match.fields.team1name.fields.currentTeamLogo ? null : <img
+                        className="match-team__logo" 
+                        src={match.fields.team1name.fields.currentTeamLogo.fields.file.url} 
+                        alt={match.fields.team1name.fields.currentTeam}
+                      />
+                    }
                     <span className='match-team__name'>
                       {match.fields.team1name.fields.currentTeam}
                     </span>
@@ -50,6 +58,13 @@ class LatestMatches extends Component {
                     <span className='match-team__name'>
                       {match.fields.team2name.fields.currentTeam}
                     </span>
+                    {
+                      !match.fields.team2name.fields.currentTeamLogo ? null : <img
+                        className="match-team__logo"
+                        src={match.fields.team2name.fields.currentTeamLogo.fields.file.url} 
+                        alt={match.fields.team2name.fields.currentTeam}
+                      />
+                    }
                   </div>
                 </div>
               ))
