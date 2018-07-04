@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './styles.css'
-import InfoInput from './info-field'
 import Loader from '../loader'
 const contentful = require('contentful')
 const client = contentful.createClient({
@@ -11,7 +10,6 @@ class Info extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      formEditable: false,
       title: '',
       subtitle: ''
     }
@@ -27,49 +25,23 @@ class Info extends Component {
       ))
       .catch(console.error)
   }
-
-  ondblclick () {
-    this.setState({
-      formEditable: !this.state.formEditable
-    })
-  }
-
-  onChange (name, value) {
-    this.setState({
-      [name]: value
-    })
-  }
   render () {
-    const { title, subtitle, formEditable } = this.state
+    const { title, subtitle } = this.state
     return (
-      <div className='info' onDoubleClick={this.ondblclick}>
-        <form
-          className={`info__form ${formEditable ? 'info__form--edit' : ''}`}
-        >
-          <span className='info__pretitle'>
-            Current tournament
-          </span>
-          {
-            !this.state.title ? <Loader /> : <div className='info__form-block'>
-              <InfoInput
-                className='info__title'
-                text={title}
-                onChange={value => this.onChange('title', value)}
-                disabled={!formEditable}
-              />
-              <InfoInput
-                className='info__subtitle'
-                text={subtitle}
-                onChange={value => this.onChange('subtitle', value)}
-                disabled={!formEditable}
-              />
-            </div>
-          }
-          <input
-            type='submit'
-            className='info__form-submit'
-          />
-        </form>
+      <div className='info'>
+        <span className='info__pretitle'>
+          Current tournament
+        </span>
+        {
+          !this.state.title ? <Loader /> : <div className='info__block'>
+            <h2 className='info__title'>
+              {title}
+            </h2>
+            <span className='info__subtitle'>
+              {subtitle}
+            </span>
+          </div>
+        }
       </div>
 
     )
