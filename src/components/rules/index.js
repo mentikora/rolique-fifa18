@@ -1,9 +1,7 @@
 import React from 'react'
 import './styles.css'
-import Loader from '../loader'
 export default () => (
   <div className='rules-wrapper'>
-    <Loader />
     <p>
       These are general rules for all types of tournament.
       <br />
