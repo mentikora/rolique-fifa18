@@ -5,11 +5,17 @@
 }
 
 .homepage-content{
-  display: grid;
-  grid-template-areas: "news latestmatches";
-  grid-template-columns: 70% 30%;
-  grid-column-gap: 2px;
+  display: flex;
+  flex-wrap: wrap;
 }
+  @media (max-width: 991px){
+    .homepage-content{
+    }
+  }
+  @media (min-width: 992px){
+    .homepage-content{
+    }
+  }
 
 /* twitch stream */
 .twitch-stream-wrapper{

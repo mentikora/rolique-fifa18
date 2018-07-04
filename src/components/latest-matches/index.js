@@ -26,7 +26,7 @@ class LatestMatches extends Component {
     return (
       <div className='latest-matches-wrapper'>
         {
-          !this.state.response ? <Loader /> : <div>
+          !this.state.response ? <Loader /> : <div className="latest-matches-content">
             {
               this.state.response.map(match => (
                 <div
