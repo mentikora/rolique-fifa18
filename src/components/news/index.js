@@ -14,7 +14,8 @@ class News extends Component {
     }
   }
   componentDidMount () {
-    client.getEntries({content_type: 'news', order: 'sys.createdAt'})
+    // order: '-sys.createdAt' returns reversed ordered list
+    client.getEntries({content_type: 'news', order: '-sys.createdAt'})
       .then((response) => this.setState(
         { response: response }
       ))
@@ -24,7 +25,7 @@ class News extends Component {
     return (
       <div className='news'>
         {
-          !this.state.response ? <Loader /> : this.state.response.items.reverse().map((item, key) => (
+          !this.state.response ? <Loader /> : this.state.response.items.map((item, key) => (
             <div
               key={key}
               className='news-item'

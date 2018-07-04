@@ -14,7 +14,8 @@ class LatestMatches extends Component {
     }
   }
   componentDidMount () {
-    client.getEntries({content_type: 'latestMatches'})
+    // order: '-sys.createdAt' returns reversed ordered list
+    client.getEntries({content_type: 'latestMatches', order: '-sys.createdAt'})
       .then((response) => this.setState(
         { response: response.items }
       ))
@@ -24,12 +25,12 @@ class LatestMatches extends Component {
     return (
       <div className='latest-matches-wrapper'>
         {
-          this.state.response === null ? <Loader /> : <div>
+          !this.state.response ? <Loader /> : <div>
             {
               this.state.response.map(match => (
                 <div
                   key={match.fields.id}
-                  className={`match ${match.fields.matchOfTheDay === true ? ' match--oftheday' : ''}`}
+                  className='match'
                 >
                   <p className='match__date'>
                     {match.fields.date}
