@@ -6,6 +6,10 @@
 </ifModule>
 # END Compress text files
 
+<ifModule mod_headers.c> 
+  Header set Connection keep-alive
+</ifModule>
+
 # BEGIN Expire headers
 <ifModule mod_expires.c>
   ExpiresActive On
