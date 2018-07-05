@@ -5,7 +5,6 @@ import Rules from '../rules'
 import News from '../news'
 import Player from '../player'
 import LatestMatches from '../latest-matches'
-import MemoriesSlider from '../slider'
 import './styles.css'
 const TabContent = () => (
   <div className='tab-content'>
@@ -20,7 +19,6 @@ const Homepage = () => (
     {/* <Twitch /> */}
     <News />
     <LatestMatches />
-    <MemoriesSlider />
   </div>
 )
 const Players = () => (
