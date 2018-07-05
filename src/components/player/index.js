@@ -7,6 +7,15 @@ const client = contentful.createClient({
   space: 'l5wqt7w3yse5',
   accessToken: '805be81373240aeb73d560b7cb619df34c501edcca1d48501c1844c46dbedbc0'
 })
+const chartOptions = {
+  scale: {
+    ticks: {
+      display: false,
+      min: 0,
+      max: 100    
+    }
+  }
+}
 class Player extends Component {
   constructor (props) {
     super(props)
@@ -55,31 +64,29 @@ class Player extends Component {
                 <span className='player__nickname'>
                   `{player.fields.nickname}`
                 </span>
-                <div>
-                  {
-                    player.fields.pros ? <div className='player__pros'>
-                      Pros: {player.fields.pros}
-                    </div> : null
-                  }
-                </div>
+                {
+                  player.fields.pros ? <div className='player__pros'>
+                    Pros: {player.fields.pros}
+                  </div> : null
+                }
               </div>
               <div className='player__content-data'>
                 {
-                  player.fields.stats ? <Radar data={
+                  player.fields.stats ? <Radar options={chartOptions} data={
                     {
                       labels: ['PAC', 'SHO', 'BASIC', 'DRI', 'DEF', 'PHY'],
                       datasets: [
                         {
                           label: 'Attributes',
-                          backgroundColor: 'rgba(179,181,198,0.2)',
-                          borderColor: '#d9381f',
-                          pointBackgroundColor: 'rgba(179,181,198,1)',
+                          backgroundColor: 'rgba(255,255,255, .1)',
+                          borderColor: '#fff',
+                          pointBackgroundColor: '#e82432',
                           pointBorderColor: '#fff',
                           pointHoverBackgroundColor: '#fff',
                           pointHoverBorderColor: 'rgba(179,181,198,1)',
-                          data: player.fields.stats
+                          data: player.fields.stats,
                         }
-                      ]
+                      ],
                     }
                   } /> : null
                 }
