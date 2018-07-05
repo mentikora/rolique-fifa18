@@ -19,7 +19,6 @@ class LatestMatches extends Component {
       .then((response) => this.setState(
         { response: response.items }
       ))
-      .then((response) => console.log(this.state.response))
       .catch(console.error)
   }
   render () {
