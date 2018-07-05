@@ -26,7 +26,7 @@ class Sponsors extends Component {
     return (
       <div className='sponsors'>
         {
-          this.state.response === null ? <Loader /> : this.state.response.map((sponsor, key) => (
+          !this.state.response ? <Loader /> : this.state.response.map((sponsor, key) => (
             <div
               className='sponsor'
               key={key}
