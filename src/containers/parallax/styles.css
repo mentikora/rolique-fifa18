@@ -1,0 +1,13 @@
+.parallax {
+  height: 1000px;
+}
+  .parallax__item{
+    width: 100%;
+    height: 1000px;
+    
+    position: fixed;
+
+    background-position: center bottom;
+    background-size: auto 1038px;
+    background-repeat: repeat-x;
+  }
