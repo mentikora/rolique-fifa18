@@ -24,3 +24,18 @@
     
     height: 100vh;
   }
+
+  /* slick dots */
+  .slick-dots{
+    bottom: auto;
+    top: 0;
+    text-align: right;
+  }
+    .slick-dots li button:before{
+      color: yellow;
+      opacity: 1;
+    }
+    .slick-dots li.slick-active button:before {
+      color: red;
+    }
+  

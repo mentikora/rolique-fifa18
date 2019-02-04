@@ -6,12 +6,22 @@ import './styles.css';
 export default class RSlider extends React.Component {
   render() {
     const settings = {
-      dots: false,
+      dots: true,
       infinite: false,
       arrows: false,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      // appendDots: dots => (<ul className="custom-dots"> {dots} </ul>),
+      customPaging: i => (
+        <div
+          style={{
+            border: "1px blue solid"
+          }}
+        >
+          {i + 1}
+        </div>
+      )
     };
     return (
       <Slider {...settings} className="rslider">
