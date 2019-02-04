@@ -11,6 +11,7 @@
 }
 
 body{
-  font-family: 'Gang of Three', Arial, sans-serif;
+  font: 16px/25px 'Gang of Three', Arial, sans-serif;
+  color: var(--snow);
 }
 

@@ -12,13 +12,8 @@ export default class RSlider extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      // appendDots: dots => (<ul className="custom-dots"> {dots} </ul>),
       customPaging: i => (
-        <div
-          style={{
-            border: "1px blue solid"
-          }}
-        >
+        <div className="button">
           {i + 1}
         </div>
       )
