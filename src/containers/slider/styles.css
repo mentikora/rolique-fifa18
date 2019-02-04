@@ -2,8 +2,21 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .rslider{
-  background-color: #000;
+  background-color: #210002;
+  position: relative;
+  z-index: 100;
 }
+  .rslider::before{
+    content: '';
+    position: absolute;
+    z-index: 105;
+    left: 0; top: -150px;
+    height: 150px;
+    width: 100%;
+
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(33,0,2,1) 100%);
+
+  }
   .slick-slide{
     display: flex;
     align-items: center;

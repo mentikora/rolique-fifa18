@@ -1,3 +1,16 @@
-body {
-  
+@font-face {
+  font-family: 'Gang of Three';
+  src: url('./font/GangofThree.eot');
+  src: url('./font/GangofThree.eot?#iefix') format('embedded-opentype'),
+      url('./font/GangofThree.woff2') format('woff2'),
+      url('./font/GangofThree.woff') format('woff'),
+      url('./font/GangofThree.ttf') format('truetype'),
+      url('./font/GangofThree.svg#GangofThree') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
+
+body{
+  font-family: 'Gang of Three', Arial, sans-serif;
+}
+

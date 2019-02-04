@@ -1,0 +1,10 @@
+.logo{
+  position: absolute;
+  z-index: 5;
+  top: 30%; left: 50%;
+
+  transform: translateX(-50%);
+  font-size: 4rem;
+  line-height: 3.5rem;
+  text-align: center;
+}
