@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 export default () => (
   <div className="logo">
-    Rolique's
+    Rolique
     <br/>
     Soccer
   </div>

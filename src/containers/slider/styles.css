@@ -2,16 +2,22 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .rslider{
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   position: relative;
   z-index: 100;
+
+  background-image: url(./images/test.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
   .slick-slide{
-    display: flex;
+    display: flex !important;
     align-items: center;
-    justify-content: center;
-    
+
     height: 100vh;
+  }
+  .slick-slide.slick-active.slick-current .player{
+    background-color: var(--snow);
   }
 
   /* slick dots */
@@ -39,4 +45,41 @@
       color: var(--secondary-color);
       background-color: var(--snow);
     }
-  
+
+.player{
+  width: 300px;
+  height: 50vh;
+  margin: 10px;
+  padding: 10px;
+  font-size: 2rem;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  flex-direction: column;
+
+  background-color: var(--primary-color);
+  color: var(--night);
+
+  transform: .15s ease-in;
+}
+  .player__flex{
+    width: 100%;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+    .player__flex i {
+      font-family: Helvetica, sans-serif;
+    }
+  .player__team{
+    font-size: 15px;
+  }
+  .player__name{
+  }
+  .player__nickname{
+    /* padding-top: 15px; */
+    writing-mode: vertical-lr;
+  }
