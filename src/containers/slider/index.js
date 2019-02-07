@@ -4,18 +4,29 @@ import Player from './player'
 
 import './styles.css';
 
+import front1 from './images/hulk.gif';
+import back1 from './images/js.jpg';
+import front2 from './images/hulk.gif';
+import back2 from './images/js.jpg';
+
 const data = [
   {
     name: 'R. Malec',
     nickname: '说唱神',
-    image: '',
+    image: {
+      front: front1,
+      back: back1
+    },
     team: 'Dynamo',
     color: ''
   },
   {
     name: 'V. Paskiv',
     nickname: '我想',
-    image: '',
+    image: {
+      front: front1,
+      back: back1
+    },
     team: 'Atlitico Huila',
     color: ''
   },
@@ -98,6 +109,7 @@ export default class RSlider extends React.Component {
                 key={key}
                 team={item.team}
                 name={item.name}
+                image={item.image}
                 nickname={item.nickname}
               />
             )

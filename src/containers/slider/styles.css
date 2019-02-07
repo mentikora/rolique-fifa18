@@ -19,6 +19,9 @@
   .slick-slide.slick-active.slick-current .player{
     background-color: var(--snow);
   }
+  .slick-slide.slick-active.slick-current .player__image{
+    transform: rotateY(180deg);
+  }
 
   /* slick dots */
   .slick-dots{
@@ -82,4 +85,34 @@
   .player__nickname{
     /* padding-top: 15px; */
     writing-mode: vertical-lr;
+  }
+
+.player__image{
+  height: 150px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  perspective: 1000px;
+} 
+  .player__image--front,
+  .player__image--back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .player__image--front{
+    background-color: green;
+  }
+  .player__image--back{
+    background-color: #000;
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+  .player__image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
