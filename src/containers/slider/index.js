@@ -1,11 +1,8 @@
 import React from 'react'
-import Slider from "react-slick"
+import Slider from 'react-slick'
 import Player from './player'
-// import Video from '../../components/video'
 
 import './styles.css';
-
-import videoSrc from './video/sample.mp4'
 
 import front1 from './images/hulk.gif';
 import back1 from './images/js.jpg';
@@ -104,10 +101,6 @@ const data = [
 ]
 
 export default class RSlider extends React.Component {
-  state = {
-    activeSlide: 0,
-    activeSlide2: 0
-  };
   
   render() {
     const settings = {
@@ -122,14 +115,13 @@ export default class RSlider extends React.Component {
       variableWidth: true,
       centerMode: true,
       focusOnSelect: true,
-      // beforeChange: (current, next) => this.setState({ activeSlide: next }),
-      // afterChange: current => this.setState({ activeSlide2: current }),
       customPaging: i => (
         <div className="button">
           {i + 1}
         </div>
       )
     };
+
     return (
       <Slider {...settings} className="rslider">
         {
@@ -142,9 +134,9 @@ export default class RSlider extends React.Component {
                 image={item.image}
                 nickname={item.nickname}
               />
-            )
-          })
-        }
+              )
+            })
+          }
       </Slider>
     );
   }

@@ -8,6 +8,7 @@ import img2 from './images/bg2.png'
 import img3 from './images/bg3.png'
 import img4 from './images/bg4.png'
 import img5 from './images/bg5.png'
+import img6 from './images/bg6.png'
 
 const items = [
   img1, img2, img3, img4, img5
@@ -51,6 +52,7 @@ class Parallax extends React.Component {
               />
             })
           }
+          <ParallaxItem backgroundImage={img6} />
         </div>
       </React.Fragment>
     )

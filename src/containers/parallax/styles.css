@@ -1,5 +1,6 @@
 .parallax {
   height: 1000px;
+  position: relative;
 }
   .parallax__item{
     width: 100%;
@@ -10,4 +11,8 @@
     background-position: center bottom;
     background-size: auto 1038px;
     background-repeat: repeat-x;
+  }
+
+  .parallax__item:last-child{
+    position: relative;
   }

@@ -3,6 +3,7 @@ import './styles.css'
 
 import RSlider from './containers/slider'
 import Parallax from './containers/parallax/parallax'
+import About from './containers/about/index'
 
 class App extends Component {
   render () {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className='App'>
         <div className='page-layout'>
           <Parallax />
+          <About />
           <RSlider />
         </div>
       </div>
@@ -18,3 +20,4 @@ class App extends Component {
 }
 
 export default App
+
