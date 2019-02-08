@@ -4,9 +4,9 @@ import './styles.css'
 import Logo from '../../components/logo/index';
 
 import img1 from './images/bg1.png'
-import img2 from './images/bg2.png'
+import img2 from './images/bg2-1.png'
 import img3 from './images/bg3.png'
-import img4 from './images/bg4.png'
+import img4 from './images/bg4-1.png'
 import img5 from './images/bg5.png'
 import img6 from './images/bg6.png'
 
