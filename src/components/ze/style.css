@@ -1,0 +1,50 @@
+.ze {
+  width: 100%;
+  height: 100vh;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #348155;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.le {
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-radius: 1rem;
+  
+  font-size: 4rem;
+  line-height: 1;
+  color: #3B615C;
+  background-color: #F4CE1C;
+}
+
+.ns {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 1rem;
+
+  background-color: #fff;
+  font-size: 3rem;
+  line-height: 1;
+
+  transform: rotate(-5deg);
+}
+
+.ky {
+  color: #F0C810;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.perdisent {
+  color: #fff;
+}
