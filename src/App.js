@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './styles.css'
 
-import RSlider from './containers/slider'
 import Parallax from './containers/parallax/parallax'
 import About from './containers/about/index'
 
@@ -12,7 +11,6 @@ class App extends Component {
         <div className='page-layout'>
           <Parallax />
           <About />
-          <RSlider />
         </div>
       </div>
     )
