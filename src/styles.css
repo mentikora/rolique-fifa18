@@ -1,17 +1,13 @@
 @font-face {
-  font-family: 'Gang of Three';
-  src: url('./font/GangofThree.eot');
-  src: url('./font/GangofThree.eot?#iefix') format('embedded-opentype'),
-      url('./font/GangofThree.woff2') format('woff2'),
-      url('./font/GangofThree.woff') format('woff'),
-      url('./font/GangofThree.ttf') format('truetype'),
-      url('./font/GangofThree.svg#GangofThree') format('svg');
+  font-family: 'SouthPark';
+  src: url('./font/sp.ttf');
+  src: url('./font/sp.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body{
-  font: 16px/25px 'Gang of Three', Arial, sans-serif;
-  color: var(--snow);
+  font: 16px/25px 'SouthPark', Arial, sans-serif;
+  color: var(--night);
 }
 
