@@ -1,9 +1,15 @@
 import React from 'react'
 import './styles.css'
-export default () => (
-  <div className="logo">
-    Rolique
+export const Logo = () => (
+  <div className="logo-wrapper">
+    <span className="logo">
+      Rolique
+      <br/>
+      Soccer
+    </span>
     <br/>
-    Soccer
+    <span className="estd">
+      &deg; ESTD 2018 &deg;
+    </span>
   </div>
 )

@@ -1,10 +1,12 @@
-.logo{
-  position: absolute;
-  z-index: 5;
-  top: 30%; left: 50%;
-
-  transform: translateX(-50%);
-  font-size: 4rem;
-  line-height: 3.5rem;
+.logo-wrapper {
   text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.estd {
+  font-size: 0.875rem;
+  color: #a4a4a4;
 }
