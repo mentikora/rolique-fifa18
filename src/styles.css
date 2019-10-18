@@ -7,7 +7,21 @@
 }
 
 body{
-  font: 16px/25px 'SouthPark', Arial, sans-serif;
-  color: var(--night);
+  font: 16px/25px 'SouthPark', Helvetica, Arial, sans-serif;
+  color: var(--primary-color);
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+h2 {
+  font-size: 1.8rem;
 }
 

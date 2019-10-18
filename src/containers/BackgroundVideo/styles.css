@@ -2,11 +2,15 @@
   width: 100%;
   height: 80vh;
   position: relative;
+  background-color: #000;
 }
   .background-video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    margin: 0;
+    line-height: 0;
   }
   .background-video__content {
     position: absolute;
@@ -18,6 +22,9 @@
     align-items: center;
 
     color: #fff;
-
-    background: rgba(0,0,0, .5);
+    background-color: rgba(0,0,0, .5);
+    background-image: url('./home-hero.png');
+    background-position: 50% calc(100% + 1px);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
