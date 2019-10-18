@@ -23,8 +23,8 @@
 
     color: #fff;
     background-color: rgba(0,0,0, .5);
-    background-image: url('./home-hero.png');
+    /* background-image: url('./home-hero.png');
     background-position: 50% calc(100% + 1px);
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
   }

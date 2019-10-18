@@ -1,23 +1,32 @@
 import React from 'react'
-import { TextHeading } from '../index'
+import { TextHeading, Texture } from '../index'
+import './style.css'
 
 type IProps = {
   children?: any,
-  sectionName?: string,
+  sectionName: string,
   pre?: string,
   title?: string,
+  color: string,
 }
 
 export const Section: React.FunctionComponent<IProps> = ({
   children,
   sectionName,
   pre,
-  title
+  title,
+  color
 }) => {
   return (
-    <section className={`container container-${sectionName}`}>
-      <TextHeading pre={pre} title={title} />
-      {children}
+    <section
+      style={{backgroundColor: color}}
+      className={`section section-${sectionName}`}
+    >
+      <div className="container">
+        <TextHeading pre={pre} title={title} />
+        {children}
+        <Texture color={color} className={`${sectionName}`}/>
+      </div>
     </section>
   )
-};
+}
