@@ -1,7 +1,15 @@
 import React from 'react'
 import './style.css'
 
-export const TextHeading = ({ pre = 'pre', title = 'title' }) => {
+interface IProps {
+  pre?: string,
+  title?: string,
+}
+
+export const TextHeading: React.FunctionComponent<IProps> = ({
+  pre,
+  title
+}) => {
   return (
     <>
       <span className="pre-h1">

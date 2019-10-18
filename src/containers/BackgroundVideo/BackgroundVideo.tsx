@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css'
 // import video from './video.mp4'
 import { Logo } from '../../components/index'
+
 export const BackgroundVideo = () => {
   return (
     <div className="background-video">

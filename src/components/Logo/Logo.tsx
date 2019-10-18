@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css'
+
 export const Logo = () => (
   <div className="logo-wrapper">
     <span className="small">
