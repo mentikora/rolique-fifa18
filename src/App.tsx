@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BackgroundVideo } from './containers/index';
-import { Section } from './components/index'
+import { Section, Board } from './components/index'
 import './styles.css'
 
 class App extends Component {
@@ -14,7 +14,9 @@ class App extends Component {
             title="title"
             sectionName="rules"
             color="red"
-          />
+          >
+            <Board />
+          </Section>
         </div>
       </div>
     )
