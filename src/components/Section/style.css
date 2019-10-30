@@ -5,5 +5,10 @@
 }
 
 .section-rules {
-  color: #fff;
+  color: var(--snow);
 }
+  .section-rules .container,
+  .section-lastChampions .container {
+    display: flex;
+    justify-content: center;
+  }

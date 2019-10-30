@@ -4,7 +4,9 @@
   margin-bottom: var(--gutter);
 
   font-size: 1.2rem;
+  line-height: 1.2rem;
   color: currentColor;
+  margin-bottom: 1rem;
 }
   .pre-h1:after {
     content: '';

@@ -2,4 +2,6 @@
   --margin: calc(var(--gutter) * 4);
   margin-top: var(--margin);
   margin-bottom: var(--margin);
+
+  color: var(--primary-color);
 }

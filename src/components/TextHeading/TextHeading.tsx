@@ -11,13 +11,13 @@ export const TextHeading: React.FunctionComponent<IProps> = ({
   title
 }) => {
   return (
-    <>
+    <div>
       <span className="pre-h1">
         {pre}
       </span>
       <h1>
         {title}
        </h1>
-    </>
+    </div>
   )
 };
