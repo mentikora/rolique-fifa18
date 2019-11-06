@@ -1,0 +1,19 @@
+.imaginarium {
+  padding: 64px;
+}
+  .imaginarium img {
+    display: block;
+    max-width: 100%;
+    border: 16px solid #000;
+  }
+
+.imaginarium-row {
+  display: flex;
+}
+  .imaginarium-row:nth-child(even) {
+    justify-content: flex-end;
+  }
+
+.imaginarium-container {
+  width: 67%;
+}

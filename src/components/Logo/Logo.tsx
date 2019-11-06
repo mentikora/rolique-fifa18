@@ -9,7 +9,7 @@ export const Logo = () => (
     <span className="logo">
       Rolique
       <br/>
-      Soccer
+      eSport
     </span>
     <span className="small">
       &deg; ESTD 2018 &deg;

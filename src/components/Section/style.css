@@ -4,11 +4,19 @@
   padding-bottom: 5rem;
 }
 
+.section ul {
+  padding-left: 20px;
+}
+
 .section-rules {
   color: var(--snow);
 }
   .section-rules .container,
-  .section-lastChampions .container {
+  .section-motivation .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+  }
+  .section-motivation .container {
+    flex-direction: row-reverse;
   }

@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import * as mrmackey from './images/mrmackey.png'
 import * as pcprincipal from './images/pcprincipal.png'
+import * as randy from './images/randy.png'
 import './style.css'
 
 interface IProps {
@@ -20,6 +21,8 @@ export const CartoonCharacter: FunctionComponent<IProps> = ({
         return mrmackey
       case "pcprincipal":
         return pcprincipal
+      case "randy":
+        return randy
       default:
         break;
     }
