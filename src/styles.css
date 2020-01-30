@@ -22,6 +22,13 @@ h1 {
   line-height: 3.75rem;
   margin: 0 0 2rem 0;
 }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+
 h2 {
   font-size: 1.8rem;
 }
@@ -37,10 +44,10 @@ h2 {
   flex-direction: column;
 
   height: 100vh;
+  text-align: center;
 }
 
 .section-image {
-  margin-top: -93px;
   position: relative;
   padding: 2rem;
 
@@ -49,6 +56,9 @@ h2 {
   justify-content: center;
   flex-direction: column;
 }
+  .mt{
+    margin-top: -93px;
+  }
   .section-image img {
     display: block;
     line-height: 1;
@@ -65,14 +75,14 @@ h2 {
 
 .guess-wr {
   position: sticky;
-  top: 50%; left: 50%;
+  top: 50%;
   z-index: 2;
 
   text-align: center;
   padding: var(--g);
   background-color: rgba(0,0,0, .11);
 
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 }
   .guess-wr p {
     margin-top: 0;
