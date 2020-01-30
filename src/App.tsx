@@ -16,7 +16,7 @@ class App extends Component {
       <div className='App'>
         <div className='page-layout'>
           <BackgroundVideo />
-          <Section sectionName="motivation" bgColor="blue">
+          <Section sectionName="motivation" bgColor="white">
             <div>
               <TextHeading pre="PC Principal" title="Motivation" />
               <p>
