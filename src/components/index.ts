@@ -1,7 +1,0 @@
-export * from './Logo'
-export * from './TextHeading'
-export * from './Section'
-export * from './Texture'
-export * from './Loader'
-export * from './CartoonCharacter'
-export * from './Imaginarium'
