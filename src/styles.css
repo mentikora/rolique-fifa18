@@ -24,8 +24,8 @@ h1 {
 }
   @media (max-width: 767px) {
     h1 {
-      font-size: 2rem;
-      line-height: 2rem;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
     }
   }
 
@@ -37,7 +37,7 @@ h2 {
   padding: 1rem;
 }
 
-.section-motto {
+.section-motto, .section-picker {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,6 +45,10 @@ h2 {
 
   height: 100vh;
   text-align: center;
+}
+
+.section-picker {
+  padding-top: 100px;
 }
 
 .section-image {

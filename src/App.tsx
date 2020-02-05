@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles.css'
 import { Logo } from './components/Logo';
+import { Picker } from './components/Picker';
 import img from './img/bg_optimized.jpg';
 import cx from 'classnames';
 
@@ -20,6 +21,9 @@ const App: React.FunctionComponent = () => {
           src={img}
           className={cx({'filter': guess})}
           alt="winter is coming"/>
+      </section>
+      <section className="section-picker">
+        <Picker />
       </section>
       <section className="section-motto">
         <Logo />
