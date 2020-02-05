@@ -7,9 +7,10 @@ type ITeam = {
 }
 
 const Team: React.FunctionComponent<ITeam> = (props) => {
-  const { name, country} = props;
+  const { name, country , children} = props;
   return (
     <div className="team">
+      <span className="team__counter">{children}</span>
       <span className="team__name">{name}</span>
       <span className="team__country">( {country} )</span>
     </div>
@@ -48,6 +49,7 @@ export const Picker: React.FunctionComponent = () => {
     const min = 0;
     const max = arr.length - 1;
     let random = min + Math.random() * (max + 1 - min);
+    console.log(Math.floor(random))
     return arr[Math.floor(random)];
   }
 
@@ -70,7 +72,7 @@ export const Picker: React.FunctionComponent = () => {
 
   return <div className="team-picker">
     <div className="team team-one">
-      {T1Team && <Team {...T1Team} />}
+      {T1Team && <Team {...T1Team}>Team 1 (top)</Team>}
     </div>
     <div className="teams-list">
       <button
@@ -87,7 +89,7 @@ export const Picker: React.FunctionComponent = () => {
       </ul>
     </div>
     <div className="team team-one">
-      {T2Team && <Team {...T2Team} />}
+      {T2Team && <Team {...T2Team}>Team 2 (bottom)</Team>}
     </div>
   </div>
 }

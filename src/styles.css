@@ -37,7 +37,7 @@ h2 {
   padding: 1rem;
 }
 
-.section-motto, .section-picker {
+.section-motto {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,15 @@ h2 {
 }
 
 .section-picker {
-  padding-top: 100px;
+  padding-top: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  text-align: center;
 }
 
 .section-image {
