@@ -31,7 +31,7 @@ export const FBComment: React.FunctionComponent<Props> = ({
   return (
     <div className="fb-post">
       <div className="fb-post__head">
-        <div className="fb-post__avatar" style={{backgroundImage: `url(${avatar})`}}/>
+        <div className="fb-post__avatar" style={{backgroundImage: `url(${avatar || ''})`}}/>
         <div className="flex">
           <div>
             <span className="fb-post__name">
@@ -58,7 +58,7 @@ export const FBComment: React.FunctionComponent<Props> = ({
         <img src={image} alt="stay calm" />
       </div>}
       {isLiked && <div className="fb-post__likes">
-        <span>You and 100500 others</span>
+        <span>You, Pavlo Zibrov and 100500 others</span>
       </div>}
       {controls && <div className="fb-post__footer">
         <button type="button" onClick={onLikeClick}>
