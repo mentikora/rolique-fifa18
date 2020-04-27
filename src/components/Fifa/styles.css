@@ -1,0 +1,34 @@
+.fifa-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  height: 100vh;
+  background: #000 url('./images/david-beckham-france-1998.jpg') no-repeat 50%;
+  background-size: cover;
+}
+.fifa-section h1 {
+  line-height: .3;
+  color: var(--mistGray);
+  font-size: 15vw;
+  padding: 10px;
+  background-color: rgba(0,0,0, .3);
+  text-transform: uppercase;
+}
+.fifa-section h1 span {
+  color: var(--timidBlue);
+}
+.fifa-section a {
+  position: absolute;
+  bottom: 30px;
+}
+
+.info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+
+  padding: 30px 10px;
+}

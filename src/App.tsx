@@ -1,34 +1,13 @@
 import React from 'react'
 import './styles.css'
-import { Logo } from './components/Logo';
-import { Picker } from './components/Picker';
-import img from './img/bg_optimized.jpg';
-import cx from 'classnames';
+import { Fifa } from './components/Fifa';
+import { CSGO } from './components/CSGO';
 
 const App: React.FunctionComponent = () => {
-  const [guess, changeGuess] = React.useState(true);
   return (
     <main className='App'>
-      <section className={cx("section-image", {'mt': guess})}>
-        {guess && <div className="guess-wr">
-          <p>Guess who can be on that picture</p>
-          <button
-            onClick={() => changeGuess(false)}
-            type="button"
-            className="button">I'm ready</button>
-        </div>}
-        <img
-          src={img}
-          className={cx({'filter': guess})}
-          alt="winter is coming"/>
-      </section>
-      <section className="section-picker">
-        <Picker />
-      </section>
-      <section className="section-motto">
-        <Logo />
-        <h1>winter is coming</h1>
-      </section>
+      <Fifa />
+      <CSGO />
     </main>
   )
 };
