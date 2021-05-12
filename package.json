@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "ramda": "^0.25.0",
     "react": "^16.4.0",
     "react-chartjs-2": "^2.7.2",
